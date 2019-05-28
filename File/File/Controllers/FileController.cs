@@ -24,10 +24,10 @@ namespace File.Controllers
             return View(_context.Files.ToList());
         }
 
-        public IActionResult Show(int id)
-        {
-            return View(_context.Files.First(f => f.Id == id));
-        }
+        //public IActionResult Show(int id)
+        //{
+        //    return View(_context.Files.First(f => f.Id == id));
+        //}
 
         [HttpPost]
         public async Task<IActionResult> Download(IFormFile uploadedFile)
