@@ -1,0 +1,30 @@
+﻿@model IEnumerable<FirstProject.Models.Dish>
+
+    @{
+        foreach (var i in Model)
+        {
+
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h3 class="pull-right">@i.Price.ToString("c")</h3>
+                        <h3>
+                            <a>@i.Name</a>
+                        </h3>
+                        <p>@i.ShortDescription</p>
+                            <a class="btn btn-success" id="cartButton" asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-Id="@i.ID">
+                                Добавить блюдо в заказ
+                            </a>
+                    </div>
+                </div>
+        }
+    }
+
+@{ if (User.IsInRole("Admin"))
+    {
+        <p class="btn btn-group pull-left">
+            <a class="btn btn-success" id="addButton" asp-controller="Home" asp-action="CreateDish" @*asp-route-Id="@i.Id" *@>
+                Добавить блюдо
+            </a>
+        </p>
+    }
+}
