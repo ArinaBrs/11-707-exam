@@ -1,0 +1,24 @@
+﻿@model IEnumerable<File.Models.FileModel>
+@{
+    ViewData["Title"] = "Добавление файла";
+}
+<h3>Выберите файл для загрузки</h3>
+<form asp-action="Download" asp-controller="Download" method="post" enctype="multipart/form-data">
+    <input type="file" name="uploadedFile" /><br>
+    <p>
+        <b>Введите краткое описание файла:</b><br>
+        <input type="text" size="40">
+    </p>
+    <p>
+        Введите подробное описание файла:<Br>
+        <textarea name="comment" cols="40" rows="3"></textarea>
+    </p>
+    <input type="submit" value="Загрузить" />
+
+</form>
+
+<h3>Все файлы</h3>
+@foreach (var f in Model)
+{
+    <p><object data="@Url.Content(f.Path)"></object></p>
+}
