@@ -11800,11 +11800,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\File\\File\\File.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\Exam\\File\\File\\File.csproj",
       "projectName": "File",
-      "projectPath": "C:\\Users\\User\\source\\repos\\File\\File\\File.csproj",
+      "projectPath": "C:\\Users\\User\\Documents\\Exam\\File\\File\\File.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\File\\File\\obj\\",
+      "outputPath": "C:\\Users\\User\\Documents\\Exam\\File\\File\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
